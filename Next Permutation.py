@@ -10,6 +10,5 @@ class Solution(object):
         for l in range(len(nums)-1, k-1, -1):
             if l == k or nums[l] > nums[k]: break
         nums[k], nums[l] = nums[l], nums[k]
-        new = nums[:k+1] + nums[k+1:][::-1]
-        while nums: nums.pop()
-        nums.extend(new)
+        l, r = k+1, len(nums)-1
+        while l < r: nums[l], nums[r], l, r = nums[r], nums[l], l+1, r-1
