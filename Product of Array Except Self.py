@@ -6,9 +6,7 @@ class Solution:
             else: f *= i
         res = []
         for i in nums:
-            if z == 1:
-                if i: res.append(0)
-                else: res.append(f)
-            elif z: res.append(0)
-            else: res.append(f//i)
+            if z > 1 or (z==1 and i): res.append(0)
+            elif i: res.append(f//i)
+            else: res.append(f)
         return res
