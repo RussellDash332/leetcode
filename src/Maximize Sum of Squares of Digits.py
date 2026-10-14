@@ -1,0 +1,1 @@
+class Solution:maxSumOfSquares=lambda _,n,s:(s//9*'9'+str(s%9)+'0'*n)[:n]*(s<=n*9)
